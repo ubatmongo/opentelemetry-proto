@@ -85,7 +85,7 @@ before and after the change interoperate.
 
 ## Experiments
 
-### New Experimental Components  
+### New Experimental Components
 
 Sometimes we need to experiment with new components, for example to add a
 completely new signal to OpenTelemetry. In this case, to define new experimental

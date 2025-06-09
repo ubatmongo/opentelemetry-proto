@@ -1,0 +1,20 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+load("@rules_java//java:defs.bzl", "java_proto_library")
+
+package(default_visibility = ["//visibility:public"])
+
+proto_library(
+    name = "metrics_proto",
+    srcs = [
+        "metrics.proto",
+    ],
+    deps = [
+        "//opentelemetry/proto/common/v1:common_proto",
+        "//opentelemetry/proto/resource/v1:resource_proto",
+    ],
+)
+
+java_proto_library(
+    name = "metrics_java_proto",
+    deps = [":metrics_proto"],
+)
